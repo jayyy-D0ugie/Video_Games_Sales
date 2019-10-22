@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_rank: 
+  na_sales: 
+  jp_sales: 
+  global_sales: 
+  game_name: one
+  developer_name: one
+  publisher_name: one
+  genre_name: one
+  platform_name: one
+
+two:
+  game_rank: 
+  na_sales: 
+  jp_sales: 
+  global_sales: 
+  game_name: two
+  developer_name: two
+  publisher_name: two
+  genre_name: two
+  platform_name: two

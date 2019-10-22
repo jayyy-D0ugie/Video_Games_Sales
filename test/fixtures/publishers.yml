@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  publisher_name: MyString
+  games_from_publisher: 
+
+two:
+  publisher_name: MyString
+  games_from_publisher: 

@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_name: MyString
+  year_of_release: 
+  critic_score: 
+  user_score: 
+  genre_name: one
+  publisher_name: one
+  developer_name: one
+  platform_name: one
+  game_rank: one
+
+two:
+  game_name: MyString
+  year_of_release: 
+  critic_score: 
+  user_score: 
+  genre_name: two
+  publisher_name: two
+  developer_name: two
+  platform_name: two
+  game_rank: two
