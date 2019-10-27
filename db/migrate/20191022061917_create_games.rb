@@ -5,11 +5,10 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.integer :year_of_release
       t.decimal :critic_score
       t.decimal :user_score
-      t.references :genre_name, null: false, foreign_key: true
-      t.references :publisher_name, null: false, foreign_key: true
-      t.references :developer_name, null: false, foreign_key: true
-      t.references :platform_name, null: false, foreign_key: true
-      t.references :game_rank, null: false, foreign_key: true
+      t.references :genre, null: false, foreign_key: true
+      t.references :publisher, null: false, foreign_key: true
+      t.references :developer, null: false, foreign_key: true
+      t.references :platform, null: false, foreign_key: true
 
       t.timestamps
     end
