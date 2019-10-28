@@ -1,25 +1,22 @@
 Rails.application.routes.draw do
-  # get 'game/show'
-  # get 'game/index'
-  # get 'developer/show'
-  # get 'developer/index'
-  # get 'publisher/show'
-  # get 'publisher/index'
-  # get 'genre/show'
-  # get 'genre/index'
-  # get 'platform/show'
-  # get 'platform/index'
-  # get 'sales/index'
-  # get 'sales/show'
+  resources :pages
+  resources :game, only: [:index, :show]
+  resources :developer, only: :show
+  resources :publisher, only: :show
+  resources :platform, only: :show
+  resources :genre, only: :show
 
-  resources :sales
-  resources :games
-  resources :developers
-  resources :publishers
-  resources :platforms
-  resources :genre
-  
-  root to: 'sales#index'
+  get 'game/show'
+  get 'game/index'
+  get 'developer/show'
+  get 'developer/index'
+  get 'publisher/show'
+  get 'publisher/index'
+  get 'genre/show'
+  get 'genre/index'
+  get 'platform/show'
+  get 'platform/index'
+  #get '/static/:permalink', to 'pages#permalink', as: 'permalink'
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'game#index'
 end

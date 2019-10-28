@@ -1,2 +1,11 @@
-<h1>Game#show</h1>
-<p>Find me in app/views/game/show.html.erb</p>
+<h1>Name: <%= @games.game_name %></h1>
+<p><strong>Rank: </strong><%= @games.id %></p>
+<p><strong>Genre: </strong><%= @games.genre_id %></p>
+<p><strong>Developer: </strong><%= @games.developer_id %></p>
+<p><strong>Publisher: </strong><%= @games.publisher_id %></p>
+<p><strong>Critic Score: </strong><%= @games.critic_score %></p>
+<p><strong>User Score: </strong><%= @games.user_score %></p>
+
+<p><%= link_to "Home", root_path %></p>
+
+

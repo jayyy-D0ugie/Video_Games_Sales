@@ -58,3 +58,5 @@ gem 'smarter_csv'
 gem 'jsonapi-rails'
 
 gem 'kaminari'
+
+gem 'bootstrap'

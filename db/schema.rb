@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_224812) do
+ActiveRecord::Schema.define(version: 2019_10_28_162101) do
 
   create_table "developers", force: :cascade do |t|
     t.string "developer_name"
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 2019_10_24_224812) do
   create_table "genres", force: :cascade do |t|
     t.string "genre_name"
     t.integer "games_in_category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string "title"
+    t.text "context"
+    t.string "permalink"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

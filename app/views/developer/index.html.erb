@@ -1,2 +1,23 @@
-<h1>Developer#index</h1>
-<p>Find me in app/views/developer/index.html.erb</p>
+<h1>Developer</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Games in category</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= @developer.each do |developers| %>
+    <tr>
+      <td><%= developers.developer_name%></td>
+      <td><%= %></td>
+      <td><%= %></td>
+      <td><%= %></td>
+    </tr>
+
+  </tbody>
+  <% end %>
+</table>
+<p><%= link_to "Home", root_path %></p>

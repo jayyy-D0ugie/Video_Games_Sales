@@ -15,9 +15,9 @@ Sale.destroy_all
 Game.destroy_all
 
 csv_file = Rails.root + 'db/Video_Games_Sales_as_at_22_Dec_2016.csv'
-games = SmarterCSV.process(csv_file, col_sep: ' ')
+games = SmarterCSV.process(csv_file, col_sep: ',')
 
-games[1..400].each do |game|
+games[0..400].each do |game|
   d = Developer.find_or_create_by(developer_name: game[:developer])
   pub = Publisher.find_or_create_by(publisher_name: game[:publisher])
   g = Genre.find_or_create_by(genre_name: game[:genre])
@@ -29,7 +29,7 @@ games[1..400].each do |game|
     critic_score: game[:critic_score],
     user_score: game[:user_score],
     jp_sales: game[:jp_sales],
-    us_sales: game[:us_sales],
+    us_sales: game[:na_sales],
     global_sales: game[:global_sales],
     game_rank: game[:game_rank],
     developer: d,
