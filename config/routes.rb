@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   resources :pages
   resources :game, only: [:index, :show]
-  resources :developer, only: :show
-  resources :publisher, only: :show
-  resources :platform, only: :show
-  resources :genre, only: :show
+  resources :developer, only: [:index, :show]
+  resources :publisher, only: [:index, :show]
+  resources :platform, only: [:index, :show]
+  resources :genre, only: [:index, :show]
 
   get 'game/show'
   get 'game/index'

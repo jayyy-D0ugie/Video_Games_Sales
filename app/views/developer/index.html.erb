@@ -3,7 +3,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Games in category</th>
+      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -20,4 +20,6 @@
   </tbody>
   <% end %>
 </table>
+
+<%= paginate @developer, window: 2 %>
 <p><%= link_to "Home", root_path %></p>

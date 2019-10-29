@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class GameController < ApplicationController
   def index
     @games = Game.order(:game_rank).page params[:page]

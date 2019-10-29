@@ -1,8 +1,9 @@
 class DeveloperController < ApplicationController
-  def show
-    @developer = Developer.find(params[:developer_name])
+  def index
+    @developer = Developer.order(:developer_name).page params[:page]
   end
 
-  def index
+  def show
+    @developer = Developer.find(params[:id])
   end
-end
+end 

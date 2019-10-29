@@ -1,7 +1,9 @@
 class PlatformController < ApplicationController
-  def show
+   def index
+    @platform = Platform.order(:developer_name).page params[:page]
   end
 
-  def index
+  def show
+    @platform = Platform.find(params[:id])
   end
 end
