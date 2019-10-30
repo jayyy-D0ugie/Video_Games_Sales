@@ -1,4 +1,8 @@
-<h1>Developer</h1>
+  <h1>Developer</h1>
 <p><strong>Name: </strong><%= @developer.developer_name%></p>
-<%@developer.each do |list|%>
+<%@developer.games.each do |list|%>
+<p><%= list.game_name %></p>
+<% end %>
 
+<%= paginate @developer.games.game_name, window: 2 %>
+<p><%= link_to "Home", root_path%></p>

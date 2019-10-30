@@ -11,9 +11,13 @@
   <tbody>
     <% @developer.each do |developers| %>
     <tr>
-      <td><%= developers.developer_name%></td>
+    <% if @developer.empty?%>
+      <td><% unknown developer %></td>
+    <% else %>
+      <td><%= developers.developer_name %></td>
+    <% end %>
       <td><%= developers.games.size %></td>
-      <td><%= %></td>
+      <td><%= link_to "See list of games here", developers%></td>
       <td><%= %></td>
     </tr>
 

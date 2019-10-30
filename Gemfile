@@ -60,3 +60,5 @@ gem 'jsonapi-rails'
 gem 'kaminari'
 
 gem 'bootstrap'
+
+gem 'jquery-rails'
