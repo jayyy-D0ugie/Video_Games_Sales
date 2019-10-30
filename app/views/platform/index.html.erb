@@ -9,10 +9,10 @@
     </tr>
   </thead>
   <tbody>
-    <%= @platform.each do |platforms| %>
+    <% @platform.each do |platforms| %>
     <tr>
-      <td><%= platforms.platform_name%></td>
-      <td><%= %></td>
+      <td><%= platforms.platform_name %></td>
+      <td><%= platforms.games.size%></td>
       <td><%= %></td>
       <td><%= %></td>
     </tr>

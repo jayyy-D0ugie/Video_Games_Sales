@@ -1,6 +1,6 @@
 class Genre < ApplicationRecord
-  has_many :game
-  has_many :sale
+  has_many :games
+  has_many :sales
 
   validates :genre_name, presence: true
 end

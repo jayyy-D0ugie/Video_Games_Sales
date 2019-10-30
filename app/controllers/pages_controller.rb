@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  http_basic_authenticate_with name: "games", password: "voodoo_secrets", except: [:index, :show]
+  http_basic_authenticate_with name: "games", password: "voodoo_secrets"
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   def permalink

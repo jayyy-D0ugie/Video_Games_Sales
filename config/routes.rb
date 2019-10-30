@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :pages
+  get '/static/:permalink', to: 'pages#permalink', as: 'permalink'
+
   resources :game, only: [:index, :show]
   resources :developer, only: [:index, :show]
   resources :publisher, only: [:index, :show]
@@ -16,7 +18,6 @@ Rails.application.routes.draw do
   get 'genre/index'
   get 'platform/show'
   get 'platform/index'
-  #get '/static/:permalink', to 'pages#permalink', as: 'permalink'
 
   root to: 'game#index'
 end

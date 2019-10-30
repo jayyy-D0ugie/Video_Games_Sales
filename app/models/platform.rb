@@ -1,6 +1,6 @@
 class Platform < ApplicationRecord
-  has_many :game
-  has_many :sale
+  has_many :games
+  has_many :sales
 
   validates :platform_name, presence: true
 end

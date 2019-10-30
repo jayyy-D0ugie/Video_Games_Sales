@@ -12,11 +12,6 @@
   <body>
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="/">Video Game Sales</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -34,6 +29,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/platform">Platforms</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages">About us</a>
+          </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0" action="/search" accept-charset="UTF-8" method="get"><input name="utf8"
             type="hidden" value="&#x2713;" />
@@ -43,7 +41,6 @@
         </form>
       </div>
     </nav>
-
     <%= yield %>
   </body>
 </html>
