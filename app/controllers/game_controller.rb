@@ -6,4 +6,9 @@ class GameController < ApplicationController
   def show
     @games = Game.find(params[:id])
   end
+
+  def search_results
+    @query = params[:query]
+    @games = Game.where('name LIKE ?' , '%#{@query}%')
+  end
 end

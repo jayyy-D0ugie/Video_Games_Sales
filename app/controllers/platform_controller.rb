@@ -6,4 +6,9 @@ class PlatformController < ApplicationController
   def show
     @platform = Platform.find(params[:id])
   end
+
+  def search_results
+    @query = params[:query]
+    @platform = Platform.where('name LIKE ?' , '%#{@query}%')
+  end
 end

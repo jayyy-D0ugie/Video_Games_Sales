@@ -6,4 +6,10 @@ class DeveloperController < ApplicationController
   def show
     @developer = Developer.find(params[:id])
   end
-end 
+
+  def search_results
+    @query = params[:query]
+    @developer = Developer.where('name LIKE ?' , '%#{@query}%')
+  end
+
+end

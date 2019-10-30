@@ -3,7 +3,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th></th>
+      <th>Games from Publishers</th>
       <th></th>
       <th></th>
     </tr>
@@ -12,11 +12,10 @@
     <% @publisher.each do |publishers| %>
     <tr>
       <td><%= publishers.publisher_name%></td>
-      <td><%= %></td>
+      <td><%= publishers.games.size%></td>
       <td><%= %></td>
       <td><%= %></td>
     </tr>
-
   </tbody>
   <% end %>
 </table>

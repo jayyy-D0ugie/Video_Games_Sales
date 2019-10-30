@@ -3,7 +3,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th></th>
+      <th>Games from Developers</th>
       <th></th>
       <th></th>
     </tr>
@@ -12,7 +12,7 @@
     <% @developer.each do |developers| %>
     <tr>
       <td><%= developers.developer_name%></td>
-      <td><%= %></td>
+      <td><%= developers.games.size %></td>
       <td><%= %></td>
       <td><%= %></td>
     </tr>
